@@ -1,0 +1,25 @@
+{
+  "version": "0.0.1",
+  "description": "hydrasnap: Metamask snap to manage your hydra",
+  "proposedName": "hydrasnap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ablagoev/hydrasnap"
+  },
+  "source": {
+    "shasum": "6xTTr3dkxx8LMYFPKGp1qfkdSlOyUNq3jI19o6FiHRc=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "images/logo.svg",
+        "packageName": "hydrasnap",
+        "registry": "https://registry.npmjs.org"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_confirm": {},
+    "snap_getBip44Entropy_609": {}
+  },
+  "manifestVersion": "0.1"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "hydrasnap",
+  "version": "0.0.1",
+  "description": "hydrasnap: Metamask snap to manage your hydra",
+  "author": "ablagoev <alexander.i.blagoev@gmail.com>",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ablagoev/hydrasnap"
+  },
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/bundle.js",
+    "snap.manifest.json"
+  ],
+  "jest": {
+    "modulePathIgnorePatterns": [
+        "__data__"
+    ],
+    "testMatch": [ "**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)"],
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "rebuild": "yarn build:tx && yarn build:snap && yarn test:snap",
+    "test:snap": "mm-snap serve",
+    "build:snap": "rm -rf build && mm-snap build",
+    "build:tx": "rm -rf dist && tsdx build",
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "@metamask/snaps-cli": "^0.9.0",
+    "bip32": "^2.0.6",
+    "bitcoinjs-lib": "^6.0.1"
+  },
+  "devDependencies": {
+    "tsdx": "^0.14.1"
+	},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
